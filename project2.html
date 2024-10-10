@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Integrated Volunteer And Donation Platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-color: #007bff;
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+        .project-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        .project-image-container {
+            position: relative;
+            flex: 0 0 auto;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .project-image-container:hover {
+            transform: scale(1.05);
+        }
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 12px;
+        }
+        .project-image-container:hover .image-overlay {
+            opacity: 1;
+        }
+        .overlay-text {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-4">Integrated Volunteer And Donation Platform</h1>
+            <p class="lead">Discover the latest features and functionalities of the Integrated Volunteer And Donation Platform.</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="project-gallery">
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\1.png" class="project-image" alt="Hijap Market App Image 1">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 1 Description</div>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\2.png" class="project-image" alt="Hijap Market App Image 2">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 2 Description</div>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\purchase the latest trends (4).png" class="project-image" alt="Hijap Market App Image 3">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 3 Description</div>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\purchase the latest trends (5).png" class="project-image" alt="Hijap Market App Image 4">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 4 Description</div>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\purchase the latest trends (6).png" class="project-image" alt="Hijap Market App Image 5">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 5 Description</div>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="C:\Users\Ali\Downloads\purchase the latest trends (7).png" class="project-image" alt="Hijap Market App Image 6">
+                <div class="image-overlay">
+                    <div class="overlay-text">Image 6 Description</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Ali Dableh. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

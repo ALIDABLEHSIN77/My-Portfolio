@@ -1,0 +1,169 @@
+body {
+    background: linear-gradient(135deg, #e2e2e2 25%, #f0f4f8 25%, #f0f4f8 50%, #e2e2e2 50%, #e2e2e2 75%, #f0f4f8 75%, #f0f4f8 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; /* زيادة وقت الحركة */
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.5)), url('hero-background.jpg'); /* تدرج مع صورة الخلفية */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px; /* Add margin below the hero section */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #ffffff; /* لون النص الأبيض */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff; /* لون النص الأبيض */
+}
+.card {
+    perspective: 1200px; /* زيادة المنظور لتعزيز التأثير ثلاثي الأبعاد */
+    margin-top: 50px; /* تقليل المسافة لجعل البطاقات أقرب */
+}
+
+.my-card {
+    position: relative; /* ضروري لتحديد مواقع العناصر الفرعية */
+    display: block; /* يجعل من السهل النقر على البطاقة بالكامل */
+    width: 300px; /* عرض ثابت للبطاقات */
+    height: 400px; /* ارتفاع ثابت للبطاقات */
+    border-radius: 15px; /* زوايا مدورة */
+    overflow: hidden; /* يضمن عدم تجاوز المحتوى للبطاقة */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* انتقالات سلسة */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* ظل لتعزيز تأثير الطفو */
+    margin: 0 auto; /* توسيط البطاقة */
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0); /* تدرج خلفية لطيف */
+}
+
+.my-card:hover {
+    transform: translateY(-10px); /* رفع خفيف عند التحويم */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); /* ظل أعمق عند التحويم */
+}
+
+.my-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease; /* انتقال سلس للدوران */
+    transform-style: preserve-3d; /* حفظ 3D */
+}
+
+.my-card:hover .my-card-inner {
+    transform: rotateY(180deg); /* دوران عند التحويم */
+}
+
+.my-card-front,
+.my-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* إخفاء الوجه الخلفي عند الدوران */
+    border-radius: 15px; /* تطابق الزوايا المدورة */
+}
+
+.my-card-front {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* تدرج لوني ناعم */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* تباعد داخل البطاقة */
+    text-align: center; /* محاذاة النص في الوسط */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.my-card-back {
+    background-color: #007bff; /* خلفية زرقاء */
+    background-image: linear-gradient(to bottom right, #007bff, #00aaff); /* تدرج لوني للخلفية */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* بدءًا من الوجه الخلفي */
+    padding: 20px; /* تباعد داخل البطاقة الخلفية */
+    text-align: center; /* محاذاة النص في الوسط */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.my-card h3 {
+    font-size: 1.6rem; /* حجم أكبر للعناوين */
+    margin-bottom: 10px; /* تباعد أسفل العنوان */
+    color: #333; /* لون داكن للعناوين */
+}
+
+.my-card p {
+    color: #555; /* لون نص داكن */
+    line-height: 1.6; /* تباعد بين الأسطر */
+    font-size: 1rem; /* حجم نص معقول */
+}
+
+/* إضافة تأثيرات متقدمة عند التمرير */
+.my-card-front:hover {
+    transform: scale(1.05); /* تكبير خفيف عند التحويم */
+    transition: transform 0.2s ease; /* انتقال سلس */
+}
+
+
+.about-me {
+    background-color: #f8f9fa; /* لون خلفية فاتح للقسم */
+    padding: 40px 20px; /* تباعد أعلى وأسفل وأطراف */
+    border-radius: 10px; /* زوايا مدورة */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* ظل خفيف للقسم */
+}
+
+.about-me h2 {
+    color: #007bff; /* لون مميز للعناوين */
+    padding-top: 20px; /* تباعد مناسب */
+}
+
+.about-me-content {
+    margin: 20px auto; /* تباعد تلقائي من الأعلى والأسفل */
+}
+
+.about-me-photo {
+    margin-bottom: 20px; /* تباعد أسفل الصورة */
+    border-radius: 50%; /* جعل الصورة دائرية */
+    width: 160px; /* عرض الصورة */
+    height: 160px; /* ارتفاع الصورة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* ظل خفيف */
+}
+
+.about-me h3 {
+    color: #333; /* لون داكن للاسم */
+    margin-top: 10px; /* تباعد أعلى عنوان الاسم */
+}
+
+.about-me p {
+    color: #666; /* لون نص داكن */
+    line-height: 1.6; /* تباعد بين الأسطر */
+}
+
+/* تحسين الأزرار */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #00aaff); /* تدرج للأزرار */
+    border: none; /* إزالة الحدود */
+    color: white; /* نص أبيض */
+    padding: 10px 20px; /* تباعد داخلي */
+    border-radius: 5px; /* زوايا مدورة */
+    transition: background 0.3s ease; /* سلاسة في تغيير الخلفية */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #0088cc); /* تغيير اللون عند التحويم */
+}
